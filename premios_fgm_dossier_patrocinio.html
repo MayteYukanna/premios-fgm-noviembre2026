@@ -1,0 +1,2336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premios Grado Musical Excelencia 2026 — Dossier de Patrocinio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --rojo: #C5222E;
+    --rojo-oscuro: #9E1A24;
+    --gris-institucional: #4D4D4D;
+    --gris-suave: #E6E6E6;
+    --gris-muy-suave: #F5F4F0;
+    --negro: #1A1A1A;
+    --blanco: #FFFFFF;
+    --crema: #FAFAF8;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Montserrat', sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--crema);
+    color: var(--negro);
+    overflow-x: hidden;
+  }
+
+  /* ─── NAV ──────────────────────────────────── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 0 48px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(250,250,248,0.96);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--gris-suave);
+    transition: all 0.3s ease;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+
+  .nav-logo-mark {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-logo-text {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--negro);
+    line-height: 1.3;
+  }
+
+  .nav-logo-sub {
+    font-weight: 300;
+    color: var(--gris-institucional);
+    display: block;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--gris-institucional);
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--rojo); }
+
+  .nav-cta {
+    background: var(--rojo);
+    color: var(--blanco) !important;
+    padding: 8px 20px !important;
+    border-radius: 2px;
+  }
+  .nav-cta:hover { background: var(--rojo-oscuro); }
+
+  /* ─── PENTAGRAMA LINES ─────────────────────── */
+  .pentagrama {
+    position: absolute;
+    left: 0; right: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .pentagrama-line {
+    width: 100%;
+    height: 1px;
+    background: rgba(197,34,46,0.08);
+    position: absolute;
+  }
+
+  /* ─── SECCIONES GENÉRICAS ──────────────────── */
+  section {
+    position: relative;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 48px;
+  }
+
+  .container-narrow {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 48px;
+  }
+
+  /* ─── HERO ─────────────────────────────────── */
+  #hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    padding-top: 64px;
+  }
+
+  .hero-left {
+    background: var(--negro);
+    padding: 80px 64px 80px 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-pentagrama {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+  }
+
+  .hero-pentagrama-line {
+    position: absolute;
+    left: 0; right: 0;
+    height: 1px;
+    background: rgba(255,255,255,0.06);
+  }
+
+  .hero-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--rojo);
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .hero-label::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--rojo);
+  }
+
+  .hero-headline {
+    font-family: var(--serif);
+    font-size: clamp(52px, 6vw, 82px);
+    font-weight: 300;
+    line-height: 1.05;
+    color: var(--blanco);
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+  }
+
+  .hero-headline em {
+    color: var(--rojo);
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  .hero-key-concept {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+    margin-bottom: 48px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hero-key-concept::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(255,255,255,0.12);
+  }
+
+  .hero-body {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.75;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 48px;
+    max-width: 420px;
+  }
+
+  .hero-date-box {
+    display: inline-flex;
+    flex-direction: column;
+    border-left: 3px solid var(--rojo);
+    padding: 12px 20px;
+    background: rgba(197,34,46,0.08);
+  }
+
+  .hero-date-label {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--rojo);
+    margin-bottom: 4px;
+  }
+
+  .hero-date-text {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--blanco);
+  }
+
+  .hero-date-sub {
+    font-size: 11px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.5);
+    margin-top: 2px;
+    letter-spacing: 0.06em;
+  }
+
+  .hero-right {
+    background: #1A0405;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-image-placeholder {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #2a0608 0%, #0d0d0d 60%, #1a0405 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+  }
+
+  .hero-prado-text {
+    font-family: var(--serif);
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.25);
+    margin-bottom: 24px;
+  }
+
+  .hero-shield {
+    width: 120px;
+    height: 120px;
+    border: 1px solid rgba(197,34,46,0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+    position: relative;
+  }
+
+  .hero-shield::before {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    border-radius: 50%;
+    border: 1px solid rgba(197,34,46,0.15);
+  }
+
+  .hero-shield-inner {
+    text-align: center;
+  }
+
+  .hero-award-icon {
+    font-family: var(--serif);
+    font-size: 40px;
+    color: var(--rojo);
+    line-height: 1;
+  }
+
+  .hero-overlay-text {
+    text-align: center;
+    max-width: 280px;
+  }
+
+  .hero-overlay-title {
+    font-family: var(--serif);
+    font-size: 26px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.3;
+    margin-bottom: 12px;
+  }
+
+  .hero-overlay-sub {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--rojo);
+  }
+
+  .hero-scroll-hint {
+    position: absolute;
+    bottom: 32px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .scroll-hint {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+  }
+
+  .scroll-hint-text {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.3);
+  }
+
+  .scroll-hint-arrow {
+    width: 20px;
+    height: 20px;
+    border-right: 1.5px solid rgba(255,255,255,0.3);
+    border-bottom: 1.5px solid rgba(255,255,255,0.3);
+    transform: rotate(45deg);
+    animation: bounce 2s infinite;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: rotate(45deg) translateY(0); }
+    50% { transform: rotate(45deg) translateY(4px); }
+  }
+
+  /* ─── DECLARACIÓN ──────────────────────────── */
+  #declaracion {
+    background: var(--rojo);
+    padding: 96px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .declaracion-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 48px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .declaracion-eyebrow {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 28px;
+  }
+
+  .declaracion-quote {
+    font-family: var(--serif);
+    font-size: clamp(28px, 4vw, 48px);
+    font-weight: 300;
+    line-height: 1.25;
+    color: var(--blanco);
+    margin-bottom: 32px;
+  }
+
+  .declaracion-quote strong {
+    font-weight: 600;
+    font-style: italic;
+  }
+
+  .declaracion-body {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.75);
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .declaracion-bg-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--sans);
+    font-size: 180px;
+    font-weight: 800;
+    color: rgba(255,255,255,0.04);
+    white-space: nowrap;
+    letter-spacing: 0.1em;
+    pointer-events: none;
+  }
+
+  /* ─── FUNDACIÓN ────────────────────────────── */
+  #fundacion {
+    padding: 120px 0;
+    background: var(--crema);
+    position: relative;
+  }
+
+  .fundacion-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .section-label {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--rojo);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section-label::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--rojo);
+  }
+
+  .section-title {
+    font-family: var(--serif);
+    font-size: clamp(36px, 4vw, 54px);
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--negro);
+    margin-bottom: 24px;
+  }
+
+  .section-title em {
+    color: var(--rojo);
+    font-style: italic;
+  }
+
+  .section-body {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.85;
+    color: var(--gris-institucional);
+    margin-bottom: 24px;
+  }
+
+  .sistema-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    background: var(--gris-suave);
+    border: 1px solid var(--gris-suave);
+  }
+
+  .sistema-item {
+    background: var(--blanco);
+    padding: 24px;
+    position: relative;
+  }
+
+  .sistema-item-num {
+    font-family: var(--serif);
+    font-size: 40px;
+    font-weight: 300;
+    color: var(--gris-suave);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .sistema-item-title {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--negro);
+    margin-bottom: 6px;
+  }
+
+  .sistema-item-body {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--gris-institucional);
+  }
+
+  .sistema-item.active {
+    background: var(--rojo);
+  }
+
+  .sistema-item.active .sistema-item-num { color: rgba(255,255,255,0.15); }
+  .sistema-item.active .sistema-item-title { color: var(--blanco); }
+  .sistema-item.active .sistema-item-body { color: rgba(255,255,255,0.7); }
+
+  /* ─── FORMULA ──────────────────────────────── */
+  .formula-box {
+    background: var(--negro);
+    padding: 32px;
+    margin-top: 48px;
+    position: relative;
+  }
+
+  .formula-label {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 16px;
+  }
+
+  .formula-text {
+    font-family: var(--serif);
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--blanco);
+    line-height: 1.8;
+  }
+
+  .formula-text span {
+    color: var(--rojo);
+    font-weight: 400;
+  }
+
+  /* ─── LOS PREMIOS ──────────────────────────── */
+  #premios {
+    background: var(--negro);
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .premios-header {
+    text-align: center;
+    margin-bottom: 80px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .premios-header .section-label { justify-content: center; }
+  .premios-header .section-label::before { display: none; }
+
+  .premios-title {
+    font-family: var(--serif);
+    font-size: clamp(40px, 5vw, 64px);
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--blanco);
+    margin-bottom: 20px;
+  }
+
+  .premios-title em { color: var(--rojo); font-style: italic; }
+
+  .premios-subtitle {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.75;
+    color: rgba(255,255,255,0.5);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .premios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: rgba(255,255,255,0.05);
+    position: relative;
+    z-index: 1;
+  }
+
+  .premios-card {
+    background: #0D0D0D;
+    padding: 48px 36px;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s;
+  }
+
+  .premios-card:hover { background: #141414; }
+
+  .premios-card-num {
+    font-family: var(--serif);
+    font-size: 120px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.03);
+    position: absolute;
+    top: -16px;
+    right: 24px;
+    line-height: 1;
+  }
+
+  .premios-card-icon {
+    width: 48px;
+    height: 48px;
+    border: 1px solid rgba(197,34,46,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 28px;
+  }
+
+  .premios-card-icon svg {
+    width: 22px;
+    height: 22px;
+    stroke: var(--rojo);
+    fill: none;
+    stroke-width: 1.5;
+  }
+
+  .premios-card-label {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--rojo);
+    margin-bottom: 12px;
+  }
+
+  .premios-card-title {
+    font-family: var(--serif);
+    font-size: 30px;
+    font-weight: 300;
+    color: var(--blanco);
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+
+  .premios-card-body {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 32px;
+  }
+
+  .premios-card-criterios {
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding-top: 24px;
+  }
+
+  .premios-card-criterios-label {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.25);
+    margin-bottom: 12px;
+  }
+
+  .criterio {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .criterio::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    background: var(--rojo);
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 7px;
+  }
+
+  .criterio span {
+    font-size: 12px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.4);
+    line-height: 1.6;
+  }
+
+  /* ─── GALA / PRADO ─────────────────────────── */
+  #gala {
+    padding: 0;
+    background: var(--crema);
+    overflow: hidden;
+  }
+
+  .gala-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 80vh;
+  }
+
+  .gala-visual {
+    background: #0a0a0a;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 600px;
+  }
+
+  .gala-visual-bg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, #1a0a0b 0%, #050505 70%);
+  }
+
+  .prado-columns {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 16px;
+    align-items: flex-end;
+    opacity: 0.06;
+  }
+
+  .prado-col {
+    background: var(--blanco);
+  }
+
+  .gala-visual-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 48px;
+  }
+
+  .gala-fecha-grande {
+    font-family: var(--serif);
+    font-size: 90px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.06);
+    line-height: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+  }
+
+  .gala-badge {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .gala-badge-circle {
+    width: 180px;
+    height: 180px;
+    border: 1px solid rgba(197,34,46,0.3);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .gala-badge-circle::before {
+    content: '';
+    position: absolute;
+    inset: 10px;
+    border-radius: 50%;
+    border: 1px solid rgba(197,34,46,0.1);
+  }
+
+  .gala-badge-dia {
+    font-family: var(--serif);
+    font-size: 52px;
+    font-weight: 300;
+    color: var(--blanco);
+    line-height: 1;
+  }
+
+  .gala-badge-mes {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--rojo);
+  }
+
+  .gala-badge-year {
+    font-size: 10px;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    color: rgba(255,255,255,0.3);
+    margin-top: 4px;
+  }
+
+  .gala-badge-venue {
+    text-align: center;
+  }
+
+  .gala-badge-venue-name {
+    font-family: var(--serif);
+    font-size: 24px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 0.05em;
+  }
+
+  .gala-badge-venue-sub {
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.25);
+  }
+
+  .gala-content {
+    padding: 80px 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--blanco);
+  }
+
+  .gala-quote {
+    font-family: var(--serif);
+    font-size: clamp(18px, 2vw, 24px);
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--negro);
+    border-left: 3px solid var(--rojo);
+    padding-left: 24px;
+    margin-bottom: 40px;
+  }
+
+  .gala-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 40px;
+  }
+
+  .gala-feature {
+    padding: 20px 0;
+    border-top: 1px solid var(--gris-suave);
+  }
+
+  .gala-feature-icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 10px;
+  }
+
+  .gala-feature-icon svg {
+    width: 18px;
+    height: 18px;
+    stroke: var(--rojo);
+    fill: none;
+    stroke-width: 1.5;
+  }
+
+  .gala-feature-title {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--negro);
+    margin-bottom: 4px;
+  }
+
+  .gala-feature-body {
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--gris-institucional);
+    line-height: 1.6;
+  }
+
+  /* ─── IMPACTO / TESTIMONIALS ───────────────── */
+  #impacto {
+    padding: 120px 0;
+    background: var(--gris-muy-suave);
+  }
+
+  .impacto-header {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  .impacto-header .section-label { justify-content: center; }
+  .impacto-header .section-label::before { display: none; }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    background: var(--gris-suave);
+    margin-bottom: 80px;
+  }
+
+  .stat-card {
+    background: var(--blanco);
+    padding: 48px 32px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.2s;
+  }
+
+  .stat-card:hover { background: var(--crema); }
+
+  .stat-num {
+    font-family: var(--serif);
+    font-size: 64px;
+    font-weight: 300;
+    color: var(--negro);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .stat-num span {
+    color: var(--rojo);
+  }
+
+  .stat-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gris-institucional);
+    margin-bottom: 8px;
+  }
+
+  .stat-sub {
+    font-size: 11px;
+    font-weight: 300;
+    color: var(--gris-institucional);
+    opacity: 0.7;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2px;
+    background: var(--gris-suave);
+  }
+
+  .testimonial {
+    background: var(--blanco);
+    padding: 40px;
+  }
+
+  .testimonial-text {
+    font-family: var(--serif);
+    font-size: 16px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.75;
+    color: var(--negro);
+    margin-bottom: 24px;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .testimonial-avatar {
+    width: 36px;
+    height: 36px;
+    background: var(--gris-muy-suave);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--gris-institucional);
+    flex-shrink: 0;
+  }
+
+  .testimonial-name {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--negro);
+    margin-bottom: 2px;
+  }
+
+  .testimonial-role {
+    font-size: 11px;
+    font-weight: 300;
+    color: var(--gris-institucional);
+  }
+
+  /* ─── PATROCINIOS ──────────────────────────── */
+  #patrocinios {
+    padding: 120px 0;
+    background: var(--crema);
+    position: relative;
+  }
+
+  .patrocinios-header {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  .patrocinios-header .section-label { justify-content: center; }
+  .patrocinios-header .section-label::before { display: none; }
+
+  .patrocinios-subheader {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: var(--gris-institucional);
+    max-width: 640px;
+    margin: 16px auto 0;
+  }
+
+  .patrocinios-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+    background: var(--gris-suave);
+    border: 1px solid var(--gris-suave);
+    margin-bottom: 48px;
+  }
+
+  .patrocinio-card {
+    background: var(--blanco);
+    padding: 56px 40px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s;
+  }
+
+  .patrocinio-card.featured {
+    background: var(--negro);
+    border: 3px solid var(--rojo);
+    margin: -3px;
+    z-index: 2;
+    position: relative;
+  }
+
+  .featured-badge {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--rojo);
+    color: var(--blanco);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 6px 20px;
+  }
+
+  .patrocinio-nivel {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gris-institucional);
+    margin-bottom: 16px;
+  }
+
+  .featured .patrocinio-nivel { color: rgba(255,255,255,0.4); }
+
+  .patrocinio-nombre {
+    font-family: var(--serif);
+    font-size: 32px;
+    font-weight: 300;
+    color: var(--negro);
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+
+  .featured .patrocinio-nombre { color: var(--blanco); }
+
+  .patrocinio-precio {
+    margin-bottom: 32px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--gris-suave);
+  }
+
+  .featured .patrocinio-precio { border-color: rgba(255,255,255,0.08); }
+
+  .precio-num {
+    font-family: var(--serif);
+    font-size: 48px;
+    font-weight: 300;
+    color: var(--rojo);
+    line-height: 1;
+  }
+
+  .precio-label {
+    font-size: 11px;
+    font-weight: 300;
+    color: var(--gris-institucional);
+    margin-top: 4px;
+  }
+
+  .featured .precio-label { color: rgba(255,255,255,0.4); }
+
+  .precio-slots {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(197,34,46,0.08);
+    padding: 4px 12px;
+    margin-top: 8px;
+    border-radius: 2px;
+  }
+
+  .featured .precio-slots { background: rgba(197,34,46,0.2); }
+
+  .precio-slots-text {
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--rojo);
+    letter-spacing: 0.05em;
+  }
+
+  .patrocinio-beneficios {
+    list-style: none;
+    margin-bottom: 40px;
+  }
+
+  .beneficio {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .beneficio-check {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .beneficio-check svg {
+    width: 16px;
+    height: 16px;
+    stroke: var(--rojo);
+    fill: none;
+    stroke-width: 2;
+  }
+
+  .beneficio-text {
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--gris-institucional);
+    line-height: 1.5;
+  }
+
+  .featured .beneficio-text { color: rgba(255,255,255,0.6); }
+
+  .patrocinio-cta {
+    display: block;
+    text-align: center;
+    padding: 14px 24px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1.5px solid var(--negro);
+    color: var(--negro);
+    transition: all 0.2s;
+    cursor: pointer;
+    background: transparent;
+    width: 100%;
+  }
+
+  .patrocinio-cta:hover {
+    background: var(--negro);
+    color: var(--blanco);
+  }
+
+  .featured .patrocinio-cta {
+    background: var(--rojo);
+    border-color: var(--rojo);
+    color: var(--blanco);
+  }
+
+  .featured .patrocinio-cta:hover {
+    background: var(--rojo-oscuro);
+    border-color: var(--rojo-oscuro);
+  }
+
+  /* Financiación total */
+  .financiacion-box {
+    background: var(--gris-muy-suave);
+    border: 1px solid var(--gris-suave);
+    padding: 40px 48px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+  }
+
+  .fin-item {
+    padding: 0 32px;
+    border-right: 1px solid var(--gris-suave);
+    text-align: center;
+  }
+
+  .fin-item:first-child { padding-left: 0; }
+  .fin-item:last-child { border-right: none; }
+
+  .fin-num {
+    font-family: var(--serif);
+    font-size: 36px;
+    font-weight: 300;
+    color: var(--negro);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .fin-num span { color: var(--rojo); }
+
+  .fin-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gris-institucional);
+  }
+
+  /* ─── ESG ──────────────────────────────────── */
+  #esg {
+    background: var(--negro);
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .esg-header {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  .esg-title {
+    font-family: var(--serif);
+    font-size: clamp(36px, 4vw, 56px);
+    font-weight: 300;
+    color: var(--blanco);
+    margin-bottom: 16px;
+  }
+
+  .esg-title em { color: var(--rojo); font-style: italic; }
+
+  .esg-subtitle {
+    font-size: 15px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.45);
+    max-width: 560px;
+    margin: 0 auto;
+    line-height: 1.75;
+  }
+
+  .esg-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: rgba(255,255,255,0.04);
+    margin-bottom: 64px;
+  }
+
+  .esg-card {
+    background: #0d0d0d;
+    padding: 48px 36px;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.2s;
+  }
+
+  .esg-card:hover { background: #111; }
+
+  .esg-card-ods {
+    font-family: var(--serif);
+    font-size: 72px;
+    font-weight: 300;
+    color: rgba(197,34,46,0.12);
+    line-height: 1;
+    position: absolute;
+    top: 16px;
+    right: 20px;
+  }
+
+  .esg-card-tag {
+    display: inline-flex;
+    padding: 4px 10px;
+    background: rgba(197,34,46,0.15);
+    border: 1px solid rgba(197,34,46,0.2);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--rojo);
+    margin-bottom: 20px;
+  }
+
+  .esg-card-title {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 300;
+    color: var(--blanco);
+    margin-bottom: 12px;
+    line-height: 1.3;
+  }
+
+  .esg-card-body {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.75;
+    color: rgba(255,255,255,0.4);
+  }
+
+  .esg-usos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    background: rgba(255,255,255,0.04);
+  }
+
+  .esg-uso {
+    background: #0d0d0d;
+    padding: 32px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .esg-uso-icon {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(197,34,46,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .esg-uso-icon svg {
+    width: 18px;
+    height: 18px;
+    stroke: var(--rojo);
+    fill: none;
+    stroke-width: 1.5;
+  }
+
+  .esg-uso-title {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--blanco);
+    margin-bottom: 6px;
+  }
+
+  .esg-uso-body {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.4);
+  }
+
+  /* ─── CTA / CIERRE ─────────────────────────── */
+  #contacto {
+    background: var(--rojo);
+    padding: 120px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .contacto-eyebrow {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 24px;
+  }
+
+  .contacto-title {
+    font-family: var(--serif);
+    font-size: clamp(40px, 5vw, 72px);
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--blanco);
+    margin-bottom: 24px;
+  }
+
+  .contacto-body {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.75;
+    color: rgba(255,255,255,0.7);
+    max-width: 560px;
+    margin: 0 auto 48px;
+  }
+
+  .contacto-date-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid rgba(255,255,255,0.25);
+    padding: 12px 28px;
+    margin-bottom: 48px;
+    font-size: 13px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.8);
+    letter-spacing: 0.05em;
+  }
+
+  .contacto-date-pill strong { color: var(--blanco); font-weight: 600; }
+
+  .contacto-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 64px;
+  }
+
+  .btn-blanco {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--blanco);
+    color: var(--rojo);
+    text-decoration: none;
+    padding: 16px 32px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    transition: all 0.2s;
+    cursor: pointer;
+    border: none;
+  }
+
+  .btn-blanco:hover { background: var(--crema); }
+
+  .btn-outline-blanco {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: var(--blanco);
+    text-decoration: none;
+    padding: 16px 32px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    border: 1.5px solid rgba(255,255,255,0.4);
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+
+  .btn-outline-blanco:hover { border-color: var(--blanco); }
+
+  .contacto-info {
+    display: flex;
+    gap: 48px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .contacto-info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .contacto-info-label {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+  }
+
+  .contacto-info-value {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--blanco);
+  }
+
+  .contacto-divider {
+    width: 1px;
+    background: rgba(255,255,255,0.15);
+    height: 40px;
+    align-self: center;
+  }
+
+  /* ─── FOOTER ───────────────────────────────── */
+  footer {
+    background: var(--negro);
+    padding: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .footer-logo-text {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.6;
+  }
+
+  .footer-key-concept {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 300;
+    color: rgba(255,255,255,0.2);
+  }
+
+  .footer-note {
+    font-size: 11px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.25);
+    text-align: right;
+  }
+
+  /* ─── ANIMATIONS ───────────────────────────── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+
+  /* ─── NAV PROGRESS ─────────────────────────── */
+  .progress-bar {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    height: 2px;
+    background: var(--rojo);
+    z-index: 101;
+    transition: width 0.1s;
+  }
+
+  /* ─── RESPONSIVE ───────────────────────────── */
+  @media (max-width: 900px) {
+    nav { padding: 0 24px; }
+    .nav-links { display: none; }
+    .container { padding: 0 24px; }
+    .container-narrow { padding: 0 24px; }
+    #hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-left { padding: 80px 32px 60px; }
+    .hero-right { min-height: 300px; }
+    .fundacion-grid { grid-template-columns: 1fr; gap: 48px; }
+    .premios-grid { grid-template-columns: 1fr; }
+    .gala-inner { grid-template-columns: 1fr; }
+    .stats-grid { grid-template-columns: 1fr 1fr; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .patrocinios-grid { grid-template-columns: 1fr; }
+    .patrocinio-card.featured { margin: 0; border: 3px solid var(--rojo); }
+    .financiacion-box { grid-template-columns: 1fr 1fr; }
+    .esg-grid { grid-template-columns: 1fr; }
+    .esg-usos { grid-template-columns: 1fr; }
+    .gala-content { padding: 48px 32px; }
+    .gala-features { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 600px) {
+    .sistema-grid { grid-template-columns: 1fr; }
+    .stats-grid { grid-template-columns: 1fr 1fr; }
+    .financiacion-box { grid-template-columns: 1fr 1fr; gap: 0; }
+    .fin-item { padding: 0 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- BARRA DE PROGRESO -->
+<div class="progress-bar" id="progressBar" style="width:0%"></div>
+
+<!-- ─── NAVEGACIÓN ──────────────────────────── -->
+<nav>
+  <a href="#hero" class="nav-logo">
+    <img src="data:image/png;base64,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""""" alt="Fundación Grado Musical" style="height:40px;width:auto;display:block;">
+    <span class="nav-logo-sub" style="font-family:var(--sans);font-size:10px;font-weight:300;color:var(--gris-institucional);letter-spacing:0.08em;">Premios Excelencia 2026</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#premios">Los Premios</a></li>
+    <li><a href="#gala">La Gala</a></li>
+    <li><a href="#impacto">Impacto</a></li>
+    <li><a href="#patrocinios">Patrocinar</a></li>
+    <li><a href="#contacto" class="nav-cta">Unirse</a></li>
+  </ul>
+</nav>
+
+<!-- ─── 1. HERO ──────────────────────────────── -->
+<section id="hero">
+  <div class="hero-left">
+    <div class="hero-pentagrama">
+      <div class="hero-pentagrama-line" style="top:20%"></div>
+      <div class="hero-pentagrama-line" style="top:32%"></div>
+      <div class="hero-pentagrama-line" style="top:44%"></div>
+      <div class="hero-pentagrama-line" style="top:56%"></div>
+      <div class="hero-pentagrama-line" style="top:68%"></div>
+    </div>
+
+    <div class="hero-label">Dossier de Patrocinio</div>
+
+    <h1 class="hero-headline">
+      Reconocer<br>lo que <em>importa</em><br>tiene nombre.
+    </h1>
+
+    <div class="hero-key-concept">Educando con la música</div>
+
+    <p class="hero-body">
+      Los Premios Grado Musical Excelencia son mucho más que una gala. Son una declaración pública sobre qué tipo de educación, esfuerzo y compromiso merece ser ejemplo. Y el Museo del Prado es el escenario donde esa declaración cobra toda su dimensión.
+    </p>
+
+    <div class="hero-date-box">
+      <span class="hero-date-label">Próxima edición</span>
+      <span class="hero-date-text">22 de noviembre de 2026</span>
+      <span class="hero-date-sub">Museo del Prado — Madrid</span>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <div class="scroll-hint" onclick="document.getElementById('declaracion').scrollIntoView({behavior:'smooth'})">
+        <span class="scroll-hint-text">Continuar</span>
+        <div class="scroll-hint-arrow"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-image-placeholder">
+      <div class="hero-fecha-grande" style="font-family:var(--serif);font-size:200px;font-weight:300;color:rgba(255,255,255,0.025);position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);white-space:nowrap;letter-spacing:-0.02em;">2026</div>
+
+      <div class="gala-badge" style="position:relative;z-index:1;">
+        <div class="gala-badge-circle">
+          <div class="gala-badge-dia">22</div>
+          <div class="gala-badge-mes">Noviembre</div>
+          <div class="gala-badge-year">2026</div>
+        </div>
+        <div class="gala-badge-venue">
+          <div class="gala-badge-venue-name">Museo del Prado</div>
+          <div class="gala-badge-venue-sub">Madrid · España</div>
+        </div>
+
+        <div style="margin-top:24px;text-align:center;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.2);margin-bottom:12px;">Un escenario sin igual</div>
+          <svg width="200" height="20" viewBox="0 0 200 20" fill="none" style="opacity:0.15">
+            <line x1="0" y1="4" x2="200" y2="4" stroke="white" stroke-width="0.5"/>
+            <line x1="0" y1="8" x2="200" y2="8" stroke="white" stroke-width="0.5"/>
+            <line x1="0" y1="12" x2="200" y2="12" stroke="white" stroke-width="0.5"/>
+            <line x1="0" y1="16" x2="200" y2="16" stroke="white" stroke-width="0.5"/>
+            <line x1="0" y1="20" x2="200" y2="20" stroke="white" stroke-width="0.5"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── 2. DECLARACIÓN ───────────────────────── -->
+<section id="declaracion">
+  <div class="declaracion-bg-text">EXCELENCIA</div>
+  <div class="declaracion-inner">
+    <div class="declaracion-eyebrow">El espíritu de los premios</div>
+    <h2 class="declaracion-quote">
+      Reconocer no es solo celebrar.<br>
+      Es <strong>decir en voz alta</strong><br>qué merece ser ejemplo.
+    </h2>
+    <p class="declaracion-body">
+      Cada año, los Premios Grado Musical Excelencia visibilizan lo que sucede cuando la música entra de verdad en la educación. Reconocen a los alumnos que demuestran constancia y excelencia. Distinguen a las instituciones que apuestan por una formación más completa. Y convocan a quienes creen que educar bien es una causa que merece apoyo.
+    </p>
+  </div>
+</section>
+
+<!-- ─── 3. LA FUNDACIÓN ──────────────────────── -->
+<section id="fundacion">
+  <div class="container">
+    <div class="fundacion-grid">
+      <div>
+        <div class="section-label reveal">La fundación</div>
+        <h2 class="section-title reveal reveal-delay-1">
+          Una fundación que demuestra que <em>educar con música</em> cambia lo que una escuela puede llegar a ser.
+        </h2>
+        <p class="section-body reveal reveal-delay-2">
+          Fundación Grado Musical no existe para añadir música a la educación. Existe para demostrar que cuando la música entra de verdad en la formación de una persona, desarrolla disciplina, sensibilidad, esfuerzo, creatividad, escucha y trabajo compartido.
+        </p>
+        <p class="section-body reveal reveal-delay-3">
+          Y cuando eso sucede de forma sostenida, no solo crecen los alumnos: también crecen sus centros, sus familias, sus comunidades y sus oportunidades.
+        </p>
+
+        <div class="formula-box reveal reveal-delay-4">
+          <div class="formula-label">La fórmula de valor</div>
+          <div class="formula-text">
+            FGM = <span>Acceso</span> + <span>Reconocimiento</span> + <span>Práctica colectiva</span> + <span>Comunidad</span> + <span>Impacto social</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="sistema-grid reveal reveal-delay-1">
+          <div class="sistema-item">
+            <div class="sistema-item-num">01</div>
+            <div class="sistema-item-title">Programa de becas</div>
+            <div class="sistema-item-body">Concesión de becas a alumnos e instituciones educativas para la formación artística y musical. Facilita el acceso a niños y jóvenes en situaciones desfavorecidas e impulsa el talento emergente.</div>
+          </div>
+          <div class="sistema-item active">
+            <div class="sistema-item-num">02</div>
+            <div class="sistema-item-title">Premios Grado Musical Excelencia</div>
+            <div class="sistema-item-body">Reconocimiento público de alumnos que destacan por su constancia, compromiso y resultados, y de instituciones que integran la música como herramienta de desarrollo integral de la persona.</div>
+          </div>
+          <div class="sistema-item">
+            <div class="sistema-item-num">03</div>
+            <div class="sistema-item-title">Orquestas y agrupaciones escolares</div>
+            <div class="sistema-item-body">Promoción, patrocinio y apoyo a la creación de orquestas y agrupaciones musicales en el ámbito escolar. Fomenta la práctica colectiva de la música como motor de comunidad. El 100% de la donación va al proyecto.</div>
+          </div>
+          <div class="sistema-item">
+            <div class="sistema-item-num">04</div>
+            <div class="sistema-item-title">Patrocinio de actividades musicales</div>
+            <div class="sistema-item-body">Organización y apoyo a conciertos, festivales y actividades formativas con carácter educativo e inclusivo. Capacitación de educadores e impulso a la innovación musical. El 100% de la donación va al proyecto.</div>
+          </div>
+          <div class="sistema-item">
+            <div class="sistema-item-num">05</div>
+            <div class="sistema-item-title">Proyectos de inclusión social</div>
+            <div class="sistema-item-body">La música como herramienta para cohesionar comunidades, mejorar el bienestar y la salud mental, y desarrollar disciplina, trabajo en equipo y autoestima. El 100% de la donación va al proyecto.</div>
+          </div>
+          <div class="sistema-item">
+            <div class="sistema-item-num">06</div>
+            <div class="sistema-item-title">Fondos para becas y actividades</div>
+            <div class="sistema-item-body">Captación de fondos a través de eventos benéficos, conciertos y acciones de fundraising para garantizar la sostenibilidad de todos los programas y ampliar el alcance de la misión.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── 4. LOS PREMIOS ───────────────────────── -->
+<section id="premios">
+  <div class="container">
+    <div class="premios-header reveal">
+      <div class="section-label">Premios Grado Musical Excelencia</div>
+      <h2 class="premios-title">
+        No son solo una gala.<br>Son una <em>declaración</em>.
+      </h2>
+      <p class="premios-subtitle">
+        Los Premios Grado Musical Excelencia visibilizan lo que ocurre cuando la dedicación, el talento y el compromiso con la educación musical se convierten en un acto público de valor.
+      </p>
+    </div>
+
+    <!-- PREMIO AL ALUMNO: cabecera del bloque -->
+    <div class="premios-card-group-label reveal" style="margin-bottom:2px;">
+      <div style="display:flex;align-items:center;gap:12px;padding:20px 48px;background:#111;border-bottom:2px solid var(--rojo);">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--rojo)" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <span style="font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--rojo);">Premio al alumno — tres categorías</span>
+      </div>
+    </div>
+
+    <div class="premios-grid" style="grid-template-columns:repeat(3,1fr);margin-bottom:2px;">
+
+      <!-- CATEGORÍA 1: RENDIMIENTO EXCELENTE -->
+      <div class="premios-card reveal reveal-delay-1">
+        <div class="premios-card-num">01</div>
+        <div class="premios-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <div class="premios-card-label">Premio al alumno</div>
+        <h3 class="premios-card-title">Rendimiento excelente</h3>
+        <p class="premios-card-body">Alumnos que destacan por la excelencia de sus resultados. Este reconocimiento premia el talento cultivado a través del trabajo constante, la dedicación y el compromiso con su formación, reflejados en una trayectoria de logros sobresalientes y una evolución artística destacada.</p>
+      </div>
+
+      <!-- CATEGORÍA 2: CONSTANCIA Y ESFUERZO -->
+      <div class="premios-card reveal reveal-delay-2">
+        <div class="premios-card-num">02</div>
+        <div class="premios-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <div class="premios-card-label">Premio al alumno</div>
+        <h3 class="premios-card-title">Constancia y esfuerzo</h3>
+        <p class="premios-card-body">Alumnos que sobresalen por su perseverancia, compromiso y capacidad de superación. Este premio reconoce a quienes, día tras día, afrontan los retos de la formación musical con ilusión, disciplina y dedicación, demostrando que el crecimiento artístico es fruto de la constancia y el esfuerzo continuado.</p>
+      </div>
+
+      <!-- CATEGORÍA 3: ENSEÑANZAS OFICIALES -->
+      <div class="premios-card reveal reveal-delay-3">
+        <div class="premios-card-num">03</div>
+        <div class="premios-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 21h18M3 7v1a3 3 0 006 0V7m6 0v1a3 3 0 006 0V7M3 7l3-4h12l3 4"/></svg>
+        </div>
+        <div class="premios-card-label">Premio al alumno</div>
+        <h3 class="premios-card-title">Enseñanzas oficiales</h3>
+        <p class="premios-card-body">Alumnos especialmente comprometidos con las enseñanzas oficiales de música, cursando grado elemental o profesional. Este reconocimiento pone en valor su dedicación, responsabilidad y afán de excelencia en un itinerario formativo de especial exigencia y compromiso.</p>
+      </div>
+
+    </div>
+
+    <!-- PREMIO A LA INSTITUCIÓN: cabecera del bloque -->
+    <div class="premios-card-group-label reveal" style="margin-bottom:2px;">
+      <div style="display:flex;align-items:center;gap:12px;padding:20px 48px;background:#111;border-bottom:2px solid var(--rojo);">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--rojo)" stroke-width="2"><path d="M3 21h18M3 7v1a3 3 0 006 0V7m6 0v1a3 3 0 006 0V7M3 7l3-4h12l3 4"/></svg>
+        <span style="font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--rojo);">Premio a la institución</span>
+      </div>
+    </div>
+
+    <div class="premios-grid" style="grid-template-columns:1fr;">
+
+      <!-- PREMIO A LA INSTITUCIÓN -->
+      <div class="premios-card reveal reveal-delay-1">
+        <div class="premios-card-num">04</div>
+        <div class="premios-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 21h18M3 7v1a3 3 0 006 0V7m6 0v1a3 3 0 006 0V7M3 7l3-4h12l3 4"/></svg>
+        </div>
+        <div class="premios-card-label">Premio a la institución</div>
+        <h3 class="premios-card-title">Excelencia institucional</h3>
+        <p class="premios-card-body">Distingue a los centros educativos y proyectos que han integrado la música como parte real de su proyecto educativo. Instituciones que demuestran que educar con música no es un añadido, sino una forma de entender la formación integral de la persona.</p>
+        <div class="premios-card-criterios">
+          <div class="premios-card-criterios-label">Criterios de valoración</div>
+          <div class="criterio"><span>Integración real de la música en el proyecto educativo del centro</span></div>
+          <div class="criterio"><span>Impacto demostrable en el desarrollo integral del alumnado</span></div>
+          <div class="criterio"><span>Contribución a la comunidad educativa y social</span></div>
+          <div class="criterio"><span>Modelo replicable y transferible a otros entornos</span></div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── 5. LA GALA EN EL PRADO ──────────────── -->
+<section id="gala">
+  <div class="gala-inner">
+    <div class="gala-visual">
+      <div class="gala-visual-bg"></div>
+      <div class="gala-fecha-grande">PRADO</div>
+
+      <!-- Columnas del Prado estilizadas -->
+      <div style="position:absolute;bottom:0;left:0;right:0;display:flex;justify-content:center;gap:20px;align-items:flex-end;opacity:0.05;pointer-events:none;">
+        <div style="width:18px;height:240px;background:white;"></div>
+        <div style="width:18px;height:320px;background:white;"></div>
+        <div style="width:18px;height:280px;background:white;"></div>
+        <div style="width:18px;height:360px;background:white;"></div>
+        <div style="width:18px;height:360px;background:white;"></div>
+        <div style="width:18px;height:280px;background:white;"></div>
+        <div style="width:18px;height:320px;background:white;"></div>
+        <div style="width:18px;height:240px;background:white;"></div>
+      </div>
+
+      <div class="gala-visual-content">
+        <div class="gala-badge">
+          <div style="font-size:10px;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;color:var(--rojo);margin-bottom:20px;">La sede</div>
+          <div style="font-family:var(--serif);font-size:64px;font-weight:300;color:rgba(255,255,255,0.12);text-align:center;line-height:1;margin-bottom:4px;">Museo</div>
+          <div style="font-family:var(--serif);font-size:64px;font-weight:300;color:rgba(255,255,255,0.7);text-align:center;line-height:1;margin-bottom:24px;">del Prado</div>
+          <div style="font-size:11px;font-weight:300;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.3);text-align:center;">Madrid · 22 noviembre 2026</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gala-content">
+      <div class="section-label reveal">La gala</div>
+      <h2 class="section-title reveal reveal-delay-1" style="color:var(--negro);">
+        Un escenario que<br>lo dice todo.
+      </h2>
+
+      <blockquote class="gala-quote reveal reveal-delay-2">
+        "Su empresa, en el Prado. Asociada a la excelencia educativa, la música y el futuro de la educación en España."
+      </blockquote>
+
+      <p class="section-body reveal reveal-delay-3">
+        El Museo del Prado no es un salón de eventos. Es uno de los grandes museos del mundo y el escenario elegido para rendir homenaje a quienes demuestran que la música transforma la educación. Una elección que eleva el significado de cada reconocimiento y que convierte el patrocinio en una alianza cultural de primer nivel.
+      </p>
+
+      <div class="gala-features reveal reveal-delay-4">
+        <div class="gala-feature">
+          <div class="gala-feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <div class="gala-feature-title">Comunidad reunida</div>
+          <div class="gala-feature-body">Alumnos, familias, centros educativos, instituciones y empresas comprometidas con la educación.</div>
+        </div>
+        <div class="gala-feature">
+          <div class="gala-feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M15 10l4.553-2.069A1 1 0 0121 8.87v6.26a1 1 0 01-1.447.9L15 14M3 8h12v8H3z"/></svg>
+          </div>
+          <div class="gala-feature-title">Visibilidad real</div>
+          <div class="gala-feature-body">Fotografía, vídeo profesional y cobertura del acto para comunicación corporativa.</div>
+        </div>
+        <div class="gala-feature">
+          <div class="gala-feature-icon">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="gala-feature-title">Programa de gala</div>
+          <div class="gala-feature-body">Ceremonia institucional con actuación musical de los premiados y entrega de reconocimientos.</div>
+        </div>
+        <div class="gala-feature">
+          <div class="gala-feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <div class="gala-feature-title">Activos para RSC</div>
+          <div class="gala-feature-body">Informe de impacto y certificación institucional listos para memoria de sostenibilidad.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── 6. IMPACTO ───────────────────────────── -->
+<section id="impacto">
+  <div class="container">
+    <div class="impacto-header reveal">
+      <div class="section-label" style="justify-content:center;"><div style="width:20px;height:2px;background:var(--rojo);"></div>La primera edición</div>
+      <h2 class="section-title" style="text-align:center;">Una realidad que ya existe.<br><em>Datos que lo demuestran.</em></h2>
+      <p class="section-body" style="text-align:center;max-width:560px;margin:0 auto;">Fundación Grado Musical construye su marca desde hechos y evidencias, no desde promesas. Aquí lo que la primera edición de los Premios dejó.</p>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card reveal">
+        <div class="stat-num"><span>1ª</span></div>
+        <div class="stat-label">Edición celebrada</div>
+        <div class="stat-sub">Con el compromiso de crecer cada año</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-1">
+        <div class="stat-num">+<span>15</span></div>
+        <div class="stat-label">Centros participantes</div>
+        <div class="stat-sub">Colegios comprometidos con la música en su proyecto educativo</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-2">
+        <div class="stat-num">+<span>200</span></div>
+        <div class="stat-label">Asistentes a la gala</div>
+        <div class="stat-sub">Alumnos, familias, instituciones y patrocinadores</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-3">
+        <div class="stat-num"><span>100</span>%</div>
+        <div class="stat-label">Impacto directo</div>
+        <div class="stat-sub">Cada euro donado va íntegro a los proyectos</div>
+      </div>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial reveal">
+        <p class="testimonial-text">"Cuando mi hija recogió el premio, comprendí que la música no le había dado solo habilidades musicales. Le había dado disciplina, presencia y la confianza para salir al escenario ante todo el mundo."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">MR</div>
+          <div>
+            <div class="testimonial-name">Madre de alumna premiada</div>
+            <div class="testimonial-role">Edición 2025</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial reveal reveal-delay-1">
+        <p class="testimonial-text">"Recibir este reconocimiento ha sido una forma de confirmar que nuestro proyecto educativo tiene sentido. La música no es un complemento en nuestro colegio: es parte de lo que somos."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">JM</div>
+          <div>
+            <div class="testimonial-name">Director de centro premiado</div>
+            <div class="testimonial-role">Edición 2025</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial reveal reveal-delay-2">
+        <p class="testimonial-text">"Lo más valioso no fue el premio en sí, sino el momento de ver que todo el esfuerzo de años quedaba reconocido públicamente. Eso cambia la manera en que un alumno se ve a sí mismo."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">PM</div>
+          <div>
+            <div class="testimonial-name">Alumno galardonado</div>
+            <div class="testimonial-role">Edición 2025</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── 7. NIVELES DE PATROCINIO ─────────────── -->
+<section id="patrocinios">
+  <div class="container">
+    <div class="patrocinios-header reveal">
+      <div class="section-label" style="justify-content:center;"><div style="width:20px;height:2px;background:var(--rojo);"></div>Patrocinio</div>
+      <h2 class="section-title" style="text-align:center;">Elige cómo quieres<br>estar <em>presente</em>.</h2>
+      <p class="patrocinios-subheader">
+        Tres formas de asociar tu marca a lo que importa. Cada nivel ofrece visibilidad, activos para RSC y la posibilidad de formar parte de un evento de referencia en el Museo del Prado.
+      </p>
+    </div>
+
+    <div class="patrocinios-grid">
+
+      <!-- NIVEL 3: COLABORADOR -->
+      <div class="patrocinio-card reveal">
+        <div class="patrocinio-nivel">Nivel de patrocinio</div>
+        <h3 class="patrocinio-nombre">Colaborador</h3>
+        <div class="patrocinio-precio">
+          <div class="precio-num">2.000 €</div>
+          <div class="precio-label">Aportación única</div>
+          <div class="precio-slots">
+            <div class="precio-slots-text">Hasta 5 colaboradores</div>
+          </div>
+        </div>
+        <ul class="patrocinio-beneficios">
+          <li class="beneficio"><div class="beneficio-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span class="beneficio-text">2 invitaciones a la Gala en el Museo del Prado</span></li>
+          <li class="beneficio"><div class="beneficio-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span class="beneficio-text">Logo en el programa de mano del evento</span></li>
+          <li class="beneficio"><div class="beneficio-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span class="beneficio-text">Mención en web como colaborador de la edición 2026</span></li>
+          <li class="beneficio"><div class="beneficio-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span class="beneficio-text">Mención en redes sociales post-evento</span></li>
+          <li class="beneficio"><div class="beneficio-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span class="beneficio-text">Certificado digital de colaboración con la Fundación</span></li>
+          <li class="beneficio"><div class="beneficio-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span class="beneficio-text">Uso de imágenes del evento para comunicación propia</span></li>
+        </ul>
+        <div style="margin-top:16px;padding-top:12px;border-top:1px solid var(--gris-suave);">
+          <div style="font-size:7px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--gris-institucional);margin-bottom:6px;">Ventaja fiscal</div>
+          <p style="font-size:10px;font-weight:300;color:var(--gris-institucional);line-height:1.6;margin-bottom:4px;">Patrocinio publicitario: gasto deducible en IS.</p>
+          <p style="font-size:10px;font-weight:300;color:var(--gris-institucional);line-height:1.6;margin-bottom:6px;">Donación / Mecenazgo (Ley 49/2002): deducción directa en cuota IS del 35–40%, al amparo de los fines educativos y culturales de la Fundación.</p>
+          <p style="font-size:9px;font-weight:300;color:#999;line-height:1.5;font-style:italic;">Ej.: vía donación, el coste neto estimado para tu empresa puede ser de aprox. 1.200–1.300 €.</p>
+          <p style="font-size:9px;font-weight:300;color:#aaa;line-height:1.5;margin-top:6px;padding-top:6px;border-top:1px solid var(--gris-suave);">Incentivos sujetos a la situación fiscal de cada empresa. Consulte con su asesoría.</p>
+        </div>
+        <button class="patrocinio-cta" style="margin-top:24px;" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">Solicitar información</button>
+      </div>
+
+      <!-- NIVEL 1: MECENAS PRINCIPAL (FEATURED) -->
+      <div class="patrocinio-card featured reveal reveal-delay-1">
+        <div class="featured-badge">Máxima visibilidad · Exclusivo</div>
+        <div class="patrocinio-nivel" style="margin-top:20px;">Nivel de patrocinio</div>
+        <h3 class="patrocinio-nombre">Mecenas<br>Principal</h3>
+        <div class="patrocinio-precio">
+          <div class="precio-num">18.000 €</div>
+          <div class="precio-label">Aportación única</div>
+          <div class="precio-slots">
+            <div class="precio-slots-text">Único — plaza exclusiva</div>
+          </div>
+        </div>
+        <ul class="patrocinio-beneficios">
+          <li class="beneficio"><div class="beneficio-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span class="beneficio-text">Co-protagonismo en el evento: presencia en apertura del acto por el presidente de la Fundación</span></li>
+          <li class="beneficio"><div class="beneficio-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span class="beneficio-text">Mesa de presidencia con 8 invitados de libre elección</span></li>
+          <li class="beneficio"><div class="beneficio-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span class="beneficio-text">Intervención breve en el programa oficial (2-3 min)</span></li>
+          <li class="beneficio"><div class="beneficio-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span class="beneficio-text">Presencia prominente en photocall, pantallas, diplomas y programas</span></li>
+          <li class="beneficio"><div class="beneficio-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span class="beneficio-text">Nombrado en todas las comunicaciones previas al evento</span></li>
+          <li class="beneficio"><div class="beneficio-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span class="beneficio-text">Vídeo de marca con presencia corporativa rodado en el Prado</span></li>
+          <li class="beneficio"><div class="beneficio-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span class="beneficio-text">Informe de impacto personalizado para memoria de sostenibilidad</span></li>
+          <li class="beneficio"><div class="beneficio-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span class="beneficio-text">Uso exclusivo de imágenes del Prado y del acto durante 12 meses</span></li>
+        </ul>
+        <div style="margin-top:16px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.15);">
+          <div style="font-size:7px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--rojo);margin-bottom:6px;">Ventaja fiscal</div>
+          <p style="font-size:10px;font-weight:300;color:rgba(255,255,255,0.75);line-height:1.6;margin-bottom:4px;">Patrocinio publicitario: gasto deducible en IS.</p>
+          <p style="font-size:10px;font-weight:300;color:rgba(255,255,255,0.75);line-height:1.6;margin-bottom:6px;">Donación / Mecenazgo (Ley 49/2002): deducción directa en cuota IS del 35–40%, al amparo de los fines educativos y culturales de la Fundación.</p>
+          <p style="font-size:9px;font-weight:300;color:rgba(255,255,255,0.55);line-height:1.5;font-style:italic;">Ej.: vía donación, el coste neto estimado para tu empresa puede ser de aprox. 10.800–11.700 €.</p>
+          <p style="font-size:9px;font-weight:300;color:rgba(255,255,255,0.35);line-height:1.5;margin-top:6px;padding-top:6px;border-top:1px solid rgba(255,255,255,0.1);">Incentivos sujetos a la situación fiscal de cada empresa. Consulte con su asesoría.</p>
+        </div>
+        <button class="patrocinio-cta" style="margin-top:24px;" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">Reservar esta plaza</button>
+      </div>
+
+      <!-- NIVEL 2: PATROCINADOR -->
+      <div class="patrocinio-card reveal reveal-delay-2">
+        <div class="patrocinio-nivel">Nivel de patrocinio</div>
+        <h3 class="patrocinio-nombre">Patrocinador</h3>
+        <div class="patrocinio-precio">
+          <div class="precio-num">7.000 €</div>
+          <div class="precio-label">Aportación única</div>
+          <div class="precio-slots">
+            <div class="precio-slots-text">Hasta 3 patrocinadores</div>
+          </div>
+        </div>
+        <ul class="patrocinio-beneficios">
+          <li class="beneficio"><div class="beneficio-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span class="beneficio-text">Mesa en la gala con 4 invitados de libre elección</span></li>
+          <li class="beneficio"><div class="beneficio-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span class="beneficio-text">Logo en photocall, programas y pantallas del evento</span></li>
+          <li class="beneficio"><div class="beneficio-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span class="beneficio-text">Mención en el acto por parte del presentador</span></li>
+          <li class="beneficio"><div class="beneficio-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span class="beneficio-text">Logo en todas las comunicaciones digitales del evento</span></li>
+          <li class="beneficio"><div class="beneficio-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span class="beneficio-text">Mención en nota de prensa como patrocinador colaborador</span></li>
+          <li class="beneficio"><div class="beneficio-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span class="beneficio-text">Certificado institucional con descripción del impacto del proyecto</span></li>
+          <li class="beneficio"><div class="beneficio-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span class="beneficio-text">Acceso a fotografías y vídeo del evento con permiso de uso corporativo</span></li>
+          <li class="beneficio"><div class="beneficio-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><span class="beneficio-text">Ficha de impacto educativo para inclusión en memoria no financiera</span></li>
+        </ul>
+        <div style="margin-top:16px;padding-top:12px;border-top:1px solid var(--gris-suave);">
+          <div style="font-size:7px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--gris-institucional);margin-bottom:6px;">Ventaja fiscal</div>
+          <p style="font-size:10px;font-weight:300;color:var(--gris-institucional);line-height:1.6;margin-bottom:4px;">Patrocinio publicitario: gasto deducible en IS.</p>
+          <p style="font-size:10px;font-weight:300;color:var(--gris-institucional);line-height:1.6;margin-bottom:6px;">Donación / Mecenazgo (Ley 49/2002): deducción directa en cuota IS del 35–40%, al amparo de los fines educativos y culturales de la Fundación.</p>
+          <p style="font-size:9px;font-weight:300;color:#999;line-height:1.5;font-style:italic;">Ej.: vía donación, el coste neto estimado para tu empresa puede ser de aprox. 4.200–4.550 €.</p>
+          <p style="font-size:9px;font-weight:300;color:#aaa;line-height:1.5;margin-top:6px;padding-top:6px;border-top:1px solid var(--gris-suave);">Incentivos sujetos a la situación fiscal de cada empresa. Consulte con su asesoría.</p>
+        </div>
+        <button class="patrocinio-cta" style="margin-top:24px;" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">Solicitar información</button>
+      </div>
+
+    </div>
+
+    <!-- NOTA FISCAL -->
+    <div style="margin-top:12px;padding:20px 24px;border-left:3px solid var(--rojo);background:rgba(197,34,46,0.04);" class="reveal">
+      <p style="font-size:12px;font-weight:300;color:var(--gris-institucional);line-height:1.8;">
+        <strong style="font-weight:600;color:var(--negro);">Nota fiscal:</strong> La Fundación Grado Musical está acogida al régimen fiscal especial de la <strong style="font-weight:500;">Ley 49/2002 de Mecenazgo</strong>, al amparo de sus fines educativos y culturales. Las aportaciones pueden formalizarse como <strong style="font-weight:500;">contrato de patrocinio publicitario</strong> (gasto deducible en base imponible del IS, sujeto a IVA al 21%) o como <strong style="font-weight:500;">donación bajo Ley 49/2002</strong> (deducción directa en cuota del IS del 35%, o del 40% si se mantiene la aportación durante dos ejercicios consecutivos; sin IVA). Para personas físicas, la deducción en IRPF es del 80% sobre los primeros 250 € y del 40% sobre el resto. La Fundación emite la documentación correspondiente en cualquiera de las dos modalidades. Los porcentajes indicados corresponden al régimen general vigente. Se recomienda consultar con asesoría fiscal propia.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── 8. ESG / RSC ──────────────────────────── -->
+<section id="esg">
+  <div class="container">
+    <div class="esg-header reveal">
+      <div class="section-label" style="color:var(--rojo);justify-content:center;"><div style="width:20px;height:2px;background:var(--rojo);"></div>Valor ESG y RSC</div>
+      <h2 class="esg-title">Tu inversión, en <em>clave social</em>.</h2>
+      <p class="esg-subtitle">
+        El patrocinio de los Premios Grado Musical Excelencia se alinea directamente con los principales marcos de sostenibilidad y responsabilidad corporativa.
+      </p>
+    </div>
+
+    <div class="esg-grid">
+      <div class="esg-card reveal">
+        <div class="esg-card-ods">4</div>
+        <div class="esg-card-tag">ODS 4</div>
+        <h3 class="esg-card-title">Educación de calidad</h3>
+        <p class="esg-card-body">Apoyo directo a la excelencia en educación musical como herramienta de formación integral. Becas, premios y orquestas escolares como palancas de acceso y calidad educativa.</p>
+      </div>
+      <div class="esg-card reveal reveal-delay-1">
+        <div class="esg-card-ods">10</div>
+        <div class="esg-card-tag">ODS 10</div>
+        <h3 class="esg-card-title">Reducción de desigualdades</h3>
+        <p class="esg-card-body">Programas de becas que garantizan el acceso a la educación musical independientemente de la situación económica. La música como herramienta de igualdad de oportunidades.</p>
+      </div>
+      <div class="esg-card reveal reveal-delay-2">
+        <div class="esg-card-ods">11</div>
+        <div class="esg-card-tag">ODS 11</div>
+        <h3 class="esg-card-title">Comunidades sostenibles</h3>
+        <p class="esg-card-body">La música como instrumento de cohesión social y comunitaria. Orquestas escolares y actividades que generan comunidad, bienestar y transformación del tejido social.</p>
+      </div>
+    </div>
+
+    <div class="esg-usos">
+      <div class="esg-uso reveal">
+        <div class="esg-uso-icon">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        </div>
+        <div>
+          <div class="esg-uso-title">Memoria no financiera</div>
+          <div class="esg-uso-body">Informe personalizado con datos de impacto, perfiles de premiados y alcance comunitario. Listo para incluir en tu memoria de sostenibilidad.</div>
+        </div>
+      </div>
+      <div class="esg-uso reveal reveal-delay-1">
+        <div class="esg-uso-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <div>
+          <div class="esg-uso-title">Criterios ESG — Factor S</div>
+          <div class="esg-uso-body">Contribución tangible y medible al componente Social del marco ESG. Documentada y certificada por la Fundación.</div>
+        </div>
+      </div>
+      <div class="esg-uso reveal reveal-delay-2">
+        <div class="esg-uso-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>
+        </div>
+        <div>
+          <div class="esg-uso-title">Comunicación interna</div>
+          <div class="esg-uso-body">Contenidos e imágenes del Prado para campañas internas de cultura corporativa y employee engagement.</div>
+        </div>
+      </div>
+      <div class="esg-uso reveal reveal-delay-3">
+        <div class="esg-uso-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <div>
+          <div class="esg-uso-title">Reputación de marca</div>
+          <div class="esg-uso-body">Asociación a educación, juventud, cultura y comunidad. Visibilidad ante una audiencia cualificada y comprometida.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── 9. CTA CIERRE ────────────────────────── -->
+<section id="contacto">
+  <div class="declaracion-bg-text" style="color:rgba(255,255,255,0.03);">UNIRSE</div>
+  <div style="position:relative;z-index:1;padding:0 24px;">
+    <div class="contacto-eyebrow">El siguiente paso</div>
+    <h2 class="contacto-title">
+      Educando con la música.<br>Tú puedes hacer<br>que se vea.
+    </h2>
+    <p class="contacto-body">
+      El 22 de noviembre de 2026, el Museo del Prado será el escenario donde alumnos, centros e instituciones recibirán el reconocimiento que merecen. Quedan pocas plazas de patrocinio disponibles.
+    </p>
+
+    <div class="contacto-date-pill">
+      Cierre de inscripciones para patrocinadores: <strong>30 septiembre 2026</strong>
+    </div>
+
+    <div class="contacto-buttons">
+      <button class="btn-blanco" onclick="window.location.href='mailto:fundacion@gradomusical.es?subject=Interés%20en%20patrocinar%20Premios%20FGM%202026'">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Quiero patrocinar
+      </button>
+      <button class="btn-outline-blanco" onclick="window.location.href='mailto:fundacion@gradomusical.es?subject=Solicitud%20de%20reunión%20Premios%20FGM%202026'">
+        Solicitar una reunión
+      </button>
+    </div>
+
+    <div class="contacto-info">
+      <div class="contacto-info-item">
+        <span class="contacto-info-label">Web</span>
+        <span class="contacto-info-value">gradomusical.es</span>
+      </div>
+      <div class="contacto-divider"></div>
+      <div class="contacto-info-item">
+        <span class="contacto-info-label">Email</span>
+        <span class="contacto-info-value">fundacion@gradomusical.es</span>
+      </div>
+      <div class="contacto-divider"></div>
+      <div class="contacto-info-item">
+        <span class="contacto-info-label">Sede</span>
+        <span class="contacto-info-value">Madrid, España</span>
+      </div>
+      <div class="contacto-divider"></div>
+      <div class="contacto-info-item">
+        <span class="contacto-info-label">Evento</span>
+        <span class="contacto-info-value">Museo del Prado · 22 nov 2026</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ───────────────────────────────── -->
+<footer>
+  <div class="footer-logo-text">
+    <img src="data:image/png;base64,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""""" alt="Fundación Grado Musical" style="height:48px;width:auto;display:block;margin-bottom:8px;">
+    <span style="font-weight:300;opacity:0.6;">Premios Grado Musical Excelencia 2026</span>
+  </div>
+  <div class="footer-note">
+    Dossier de patrocinio · Edición 2026<br>
+    <span style="opacity:0.5;">© Fundación Grado Musical</span>
+  </div>
+</footer>
+
+<script>
+  // Barra de progreso
+  const progressBar = document.getElementById('progressBar');
+  window.addEventListener('scroll', () => {
+    const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+    progressBar.style.width = Math.min(scrolled, 100) + '%';
+  });
+
+  // Reveal on scroll
+  const revealEls = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  revealEls.forEach(el => revealObserver.observe(el));
+
+  // Nav transparencia en scroll
+  const nav = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 80) {
+      nav.style.boxShadow = '0 1px 20px rgba(0,0,0,0.08)';
+    } else {
+      nav.style.boxShadow = 'none';
+    }
+  });
+</script>
+
+</body>
+</html>
